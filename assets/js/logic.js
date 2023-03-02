@@ -34,5 +34,4 @@ const startQuiz = () => {
 
 //Added event listeners to 
 startBtn.addEventListener("click", startQuiz);
-validateUserAnswer();
-submitBtn.addEventListener("click", saveScore);
+submitBtn.addEventListener("click", submitScore);
