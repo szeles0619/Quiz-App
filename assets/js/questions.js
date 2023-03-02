@@ -2,58 +2,58 @@
 const questions = [
     {
         question: "Which Japanese company is the world&#039;s largest manufacturer of motorcycles?",
-        answer: [
+        choices: [
             "Yamaha",
             "Honda",
             "Suzuki",
             "Kawasaki"],
-        correct_answer: "Honda",
+        answer: "Honda",
     },
     {
         question: "Complete the following analogy: Audi is to Volkswagen as Infiniti is to ?",
-        answer: [
+        choices: [
             "Honda",
             "Hyundai",
             "Subaru",
             "Nissan"
         ],
-        correct_answer: "Nissan"
+        answer: "Nissan"
 
     },
     {
         question: "Which supercar company is from Sweden?",
-        answer: [
+        choices: [
             "Bugatti",
             "Koenigsegg",
             "Lamborghini",
             "McLaren"
         ],
-        correct_answer: "Koenigsegg",
+        answer: "Koenigsegg",
     },
     {
         question: "Ferrari has never made a V10 engine for any of its cars.",
-        answer: [
+        choices: [
             "True",
             "False"
         ],
-        correct_answer: "False"
+        answer: "False"
     },
     {
         question: "When was Cadillac founded?",
-        answer: [
+        choices: [
             "1964",
             "1898",
             "1902",
             "1985"
         ],
-        correct_answer: "1902"
+        answer: "1902"
     },
     {
         question: "The majority of Subaru vehicles are made in China.",
-        answer: [
+        choices: [
             "True",
             "False"
         ],
-        correct_answer: "False"
+        answer: "False"
     }
 ]

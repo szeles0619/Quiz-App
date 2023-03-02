@@ -3,35 +3,31 @@ let soundOn = true;
 const correctSound = new Audio('./assets/sfx/correct.wav');
 const incorrectSound = new Audio('./assets/sfx/incorrect.wav');
 
-//querySelector added which selects HTML elements
-const startBtn = document.querySelector("#start");
-const time = document.querySelector("#time");
-const startScreen = document.querySelector("#start-screen");
-const questionsScreen = document.querySelector("#questions");
-const questionTitle = document.querySelector("#question-title");
-const choices = document.querySelector("#choices");
-const finalScore = document.querySelector("#final-score");
-const endScreen = document.querySelector("#end-screen");
-const initials = document.querySelector('#initials');
-const submitBtn = document.querySelector('#submit');
-const toggleSoundBtn = document.querySelector("#toggleSound");
-const saved = document.querySelector(".saved");
-const error = document.querySelector(".error");
-const feedbackEl = document.querySelector(".feedback");
-const scores = document.querySelector("#scores");
 
+const time = document.getElementById("time"); 
+const start = document.getElementById("start"); 
+const startScreen = document.getElementById("start-screen"); 
+const questionScreen = document.getElementById("questions"); 
+const questionTitle = document.getElementById("question-title"); 
+const choices = document.getElementById("choices"); 
+const endScreen = document.getElementById("end-screen"); 
+const displayFinalScore = document.getElementById("final-score"); 
+const initals = document.getElementById("initials"); 
+const submitBtn = document.getElementById("submit"); 
 
-//Quiz starts when click on Start Quiz
-const startQuiz = () => {
+// Object will be kept
+let score = 0; 
+let finalScore; 
+let userScore; 
 
-    startScreen.classList.add("hide");
-    timerCount = 60;
+//Display the added time which is 60sec
+let secondsLeft = 60; 
+time.textContent = secondsLeft; 
+let timerInterval;
 
-    questionsScreen.classList.remove("hide");
-    startCounting();
-    showQuestion();
+//this is function to start the game
+function startGame() {
+  startTimer();
+  startQuestions();
+  displayQuestions();
 }
-
-//Added event listeners to 
-startBtn.addEventListener("click", startQuiz);
-submitBtn.addEventListener("click", submitScore);
