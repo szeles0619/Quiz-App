@@ -23,19 +23,19 @@ No installation required.
 
 As a User when come to this site they want to take a Quiz. To do that follow the instructions below.
 
-    - Click Start Quiz button to begin. (Be aware that you have 60 seconds to answer all questions, however if  you give a wrong answer you will be penalized 10 seconds)
+    Click Start Quiz button to begin. (Be aware that you have 60 seconds to answer all questions, however if  you give a wrong answer you will be penalized 10 seconds)
 
     <img width="960" alt="Quiz-App1" src="https://user-images.githubusercontent.com/119215005/222750692-21299d27-92d1-4705-a59b-6eca83fab10f.png">
 
-    - When finished answering all questions or you timed out your final score will be displayed.
+    When finished answering all questions or you timed out your final score will be displayed.
 
     <img width="960" alt="Quiz-App2" src="https://user-images.githubusercontent.com/119215005/222750813-0c578304-8de1-43f0-8f2c-a488b919498e.png">
 
-    - Enter your initials to save your score by click Submit.
+    Enter your initials to save your score by click Submit.
 
     <img width="960" alt="Quiz-App3" src="https://user-images.githubusercontent.com/119215005/222750887-c7b504ae-d5b3-46f8-86d2-2edb031f9f8f.png">
 
-    - You will be navigated to the Highscores where you have two options. 1 to Go Back 2 to Clear Highscores
+    You will be navigated to the Highscores where you have two options. 1 to Go Back 2 to Clear Highscores
 
     <img width="960" alt="Quiz-App4" src="https://user-images.githubusercontent.com/119215005/222750990-2a04348e-1fd0-41e1-ba99-0d2e2bbf6668.png">
 
