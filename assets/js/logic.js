@@ -27,6 +27,7 @@ function startGame() {
     displayQuestions();
 }
 
+//This is a function which make startScreen hiden and questionScreen visible
 function startQuestions() {
     startScreen.classList.add("hide");
     questionScreen.classList.remove("hide");
@@ -34,6 +35,7 @@ function startQuestions() {
 
 let currentQuestionIndex = 0;
 
+//This function will display questions and answers
 function displayQuestions() {
     let currentQuestion = questions[currentQuestionIndex];
     questionTitle.textContent = currentQuestion.question;
@@ -47,38 +49,43 @@ function displayQuestions() {
     });
 }
 
+//Display the added time which is 60sec
 let secondsLeft = 60;
 time.textContent = secondsLeft;
 let timerInterval;
 
-// function for timer
+//This is a function for timer
 function startTimer() {
     timerInterval = setInterval(function () {
         secondsLeft--;
         time.textContent = secondsLeft;
+        //Game finishes when timer got to 0
         if (secondsLeft === 0) {
             endGame();
         }
     }, 1000);
 }
 
-
+//Check answer and display next question
 function checkAnswer() {
     if (this.value === questions[currentQuestionIndex].answer) {
         score += +5;
         time.textContent = secondsLeft;
-    } else {
+    } //If answer is wrong 10 seconds will be deducted from time
+    else {
         secondsLeft -= 10;
         score -= 5;
         time.textContent = secondsLeft;
-    } if (secondsLeft < 0) {
+    } //If time goes to 0 quiz ends
+    if (secondsLeft < 0) {
         secondsLeft = 0;
     }
     currentQuestionIndex++;
 
     if (currentQuestionIndex === questions.length) {
+        //End quiz if there are no more questions
         endGame();
-    } 
+    } //Display remaining questions if there is any left
     else {
         displayQuestions();
     }
@@ -91,6 +98,8 @@ function endGame() {
     finalScore = score + secondsLeft;
     displayFinalScore.textContent = finalScore;
 }
+
+//This is a function which save player's initails
 function saveScore() {
     let initials = initals.value;
     if (!initials) {
@@ -104,12 +113,13 @@ function saveScore() {
             initials: initials,
             score: finalScore,
         };
-
+        //New score will be added to array
         savedHighscores.push(userScore);
         window.localStorage.setItem(
             "savedHighscores",
             JSON.stringify(savedHighscores)
         );
+        //Link to high scores list
         window.location.href = "highscores.html";
     }
 }
@@ -119,9 +129,7 @@ function submitEnter(event) {
         saveScore();
     }
 }
-
+//On click quiz starts
 start.addEventListener("click", startGame);
-
 submitBtn.addEventListener("click", saveScore);
-
 initals.onkeyup = submitEnter;
