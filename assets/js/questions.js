@@ -1,7 +1,7 @@
 //Questions selected from https://opentdb.com/api.php?amount=10&category=28&difficulty=medium
 const questions = [
     {
-        question: "Which Japanese company is the world&#039;s largest manufacturer of motorcycles?",
+        question: "Which Japanese company is the world`s largest manufacturer of motorcycles?",
         choices: [
             "Yamaha",
             "Honda",
